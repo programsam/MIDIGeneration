@@ -1,0 +1,9 @@
+#!/bin/sh
+BASEDIR=`dirname $0`
+exec java \
+	-XstartOnFirstThread \
+	-d32 \
+	-classpath $BASEDIR/swt/swt.jar:$BASEDIR:$BASEDIR/swt/hsqldb.jar \
+	-Djava.library.path=$BASEDIR/swt \
+	org.zapto.bensmith.midi.MIDIGen 1
+
